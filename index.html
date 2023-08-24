@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad clase 15</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .container .columna {
+
+            background-color: rgb(48, 85, 197);
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Lista de Elmentos</h2>
+        <label>Nombre del Item:</label>
+        <input type="text" id="input">
+        <button type="button" class="boton">Agregar</button>
+        <br><br><br>
+
+        <div class="container">
+            <div class="row" id="row">
+                <div class="col-6 columna columna1">Item</div>
+                <div class="col-6 columna columna2"></div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        const boton = document.querySelector(".boton");
+
+
+
+
+
+
+        boton.addEventListener("click", function () {
+
+            let input = document.getElementById("input");
+
+            let nombreItem = input.value;
+
+           
+            let divNew = document.createElement("div");
+            let div2New = document.createElement("div");
+
+
+            row.appendChild(divNew);
+            row.appendChild(div2New);
+            divNew.classList.add("col-6", "columna");
+            div2New.classList.add("col-6", "columna");
+            divNew.innerHTML = nombreItem;
+            let eliminar = document.createElement("button");
+            eliminar.innerHTML = "Eliminar";
+            div2New.appendChild(eliminar);
+            eliminar.addEventListener("click", function () {
+            divNew.remove(row);
+            div2New.remove(row);
+            
+
+            });
+            rowNew.textContent = nombreItem;
+
+        })
+
+
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
